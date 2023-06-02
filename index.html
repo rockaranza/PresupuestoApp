@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Presupuesto App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/styles/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center my-4">
+                <h1>Presupuesto App</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <!-- Presupuesto -->
+                <div class="card text-dark bg-budget mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Presupuesto</h5>
+                        <input type="text" pattern="^[0-9]*$" class="form-control mb-3" id="presupuesto" placeholder="Ingresa Tu Presupuesto">
+                        <button class="btn btn-dark" id="btnCalcular">Calcular</button>
+                    </div>
+                </div>
+
+                <!-- Gastos -->
+                <div class="card text-dark bg-bill">
+                    <div class="card-body">
+                        <h5 class="card-title">Nuevo Gasto</h5>
+                        <input type="text" class="form-control mb-3" id="nombreGasto" placeholder="Ingresa el nombre del gasto">
+                        <input type="text" pattern="^[0-9]*$" class="form-control mb-3" id="cantidadGasto" placeholder="Ingresa la cantidad del gasto">
+                        <button class="btn btn-dark" id="btnAnadirGasto">Añadir Gasto</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-8">
+                <!-- Contenedores de Presupuesto, Gastos y Saldo -->
+                <div class="d-flex justify-content-between">
+                    <div class="p-2">
+                        <h5>PRESUPUESTO</h5>
+                        <p id="totalPresupuesto">0</p>
+                    </div>
+                    <div class="p-2">
+                        <h5>GASTOS</h5>
+                        <p id="totalGastos">0</p>
+                    </div>
+                    <div class="p-2 text-dark">
+                        <h5>SALDO</h5>
+                        <p id="saldo">0</p>
+                    </div>
+                </div>
+
+                <div id="listaGastos" class="mt-3">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/js/app.js"></script>
+</body>
+
+</html>
