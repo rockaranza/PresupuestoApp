@@ -16,3 +16,7 @@ body {
   background-color: #ffe6e6;
   border-color: #dc3545;
 }
+
+.text-danger:hover {
+  color: #b41717 !important;
+}

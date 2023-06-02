@@ -7,6 +7,7 @@
     <title>Presupuesto App</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/styles/styles.css">
+    <script src="https://kit.fontawesome.com/ae6add6e95.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -37,26 +38,44 @@
                         <button class="btn btn-dark" id="btnAnadirGasto">Añadir Gasto</button>
                     </div>
                 </div>
+
+                <!-- Reiniciar APP -->
+                <div class="text-center mt-4">
+                  <button class="btn btn-danger w-100" id="btnReiniciar">Reiniciar aplicación</button>
+                </div>
             </div>
             
+            <!-- Presupuesto, Gastos y Saldo -->
             <div class="col-md-8">
-                <!-- Contenedores de Presupuesto, Gastos y Saldo -->
                 <div class="d-flex justify-content-between">
                     <div class="p-2">
                         <h5>PRESUPUESTO</h5>
-                        <p id="totalPresupuesto">0</p>
+                        <p id="totalPresupuesto">$0</p>
                     </div>
                     <div class="p-2">
                         <h5>GASTOS</h5>
-                        <p id="totalGastos">0</p>
+                        <p id="totalGastos">$0</p>
                     </div>
                     <div class="p-2 text-dark">
                         <h5>SALDO</h5>
-                        <p id="saldo">0</p>
+                        <p id="saldo">$0</p>
                     </div>
                 </div>
 
                 <div id="listaGastos" class="mt-3">
+                  <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Cantidad</th>
+                            <th scope="col">Eliminar</th>
+                        </tr>
+                    </thead>
+                    <tbody id="bodyTablaGastos">
+                        <!-- Se agregaran los gastos -->
+                    </tbody>
+                  </table>
                 </div>
             </div>
         </div>
